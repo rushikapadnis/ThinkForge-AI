@@ -1,102 +1,242 @@
+# 🚀 AgentFlow – AI Research Automation System
 
+**AgentFlow** is an AI-powered multi-agent research automation platform built with **FastAPI**, **LangGraph**, and **LLMs**. It transforms a single user query into a structured research report by coordinating specialized AI agents that plan, research, analyze, write, and review information automatically.
 
-# 🚀 AgentFlow – FastAPI AI Agent System
-
-AgentFlow is a FastAPI-powered autonomous AI research system that plans, researches, analyzes, and generates structured reports using a multi-agent workflow built with LangGraph and LLMs.
-
----
-
-## 🧠 What It Does
-
-AgentFlow takes a simple query and turns it into a full research workflow:
-
-1. Breaks query into subtopics (Planner)
-2. Collects data from web / LLM (Researcher)
-3. Extracts key insights (Analyst)
-4. Generates structured report (Writer)
-5. Reviews and improves output (Reviewer)
+> **Tech Focus:** AI Agents • Generative AI • LangGraph • FastAPI • LangChain • LLM Orchestration • Async Python
 
 ---
 
-## ⚙️ Tech Stack
+## ✨ Key Highlights
 
-- FastAPI (Backend API)
-- LangGraph (Agent workflow orchestration)
-- LangChain (LLM integration)
-- Groq / OpenAI (LLM providers)
-- DuckDuckGo Search (real-time data)
-- Python Async (concurrent execution)
+- 🤖 Built an end-to-end multi-agent AI workflow using LangGraph.
+- ⚡ Developed REST APIs with FastAPI for seamless integration.
+- 🔍 Automated research by combining web search with LLM reasoning.
+- 🧠 Implemented Planner, Researcher, Analyst, Writer, and Reviewer agents.
+- 🚀 Used asynchronous execution for parallel research tasks.
+- 📄 Generated structured, review-ready research reports automatically.
 
 ---
 
-## 🔑 Environment Setup
+# 🏗️ Architecture
 
-Create a `.env` file:
+```text
+                User Query
+                     │
+                     ▼
+            ┌────────────────┐
+            │ Planner Agent  │
+            └────────────────┘
+                     │
+                     ▼
+      ┌───────────────────────────┐
+      │ Parallel Research Agents  │
+      └───────────────────────────┘
+                     │
+                     ▼
+            ┌────────────────┐
+            │ Analyst Agent  │
+            └────────────────┘
+                     │
+                     ▼
+            ┌────────────────┐
+            │ Writer Agent   │
+            └────────────────┘
+                     │
+                     ▼
+            ┌────────────────┐
+            │ Reviewer Agent │
+            └────────────────┘
+                     │
+                     ▼
+              Final Research Report
+```
+
+---
+
+# 🛠️ Tech Stack
+
+- **Backend:** FastAPI
+- **AI Framework:** LangGraph, LangChain
+- **LLM:** Groq API / OpenAI
+- **Search:** DuckDuckGo Search
+- **Programming:** Python
+- **Concurrency:** AsyncIO
+- **Configuration:** Python Dotenv
+
+---
+
+# ✨ Features
+
+- Multi-Agent AI Architecture
+- Agent-based Task Planning
+- Automated Web Research
+- Parallel Information Gathering
+- LLM-powered Report Generation
+- Self Review & Revision Loop
+- REST APIs with FastAPI
+- Modular & Scalable Codebase
+- Environment-based Configuration
+
+---
+
+# 📂 Project Structure
+
+```text
+AgentFlow/
+│
+├── agents/
+│   ├── planner.py
+│   ├── researcher.py
+│   ├── analyst.py
+│   ├── writer.py
+│   └── reviewer.py
+│
+├── graph/
+│   └── workflow.py
+│
+├── api/
+│   └── routes.py
+│
+├── models/
+├── utils/
+├── main.py
+├── requirements.txt
+└── .env
+```
+
+---
+
+# 🔑 Environment Variables
+
+Create a `.env` file.
 
 ```env
 MAX_REVISIONS=2
 MAX_SUBTOPICS=4
 
 LLM_PROVIDER=groq
-GROQ_API_KEY=your_api_key_here
+GROQ_API_KEY=YOUR_API_KEY
+```
 
-📦 Installation
-git clone https://github.com/your-username/fastapi-ai-agentflow.git
-cd fastapi-ai-agentflow
+---
+
+# 📦 Installation
+
+```bash
+git clone https://github.com/your-username/AgentFlow.git
+
+cd AgentFlow
 
 pip install -r requirements.txt
+```
 
-▶️ Run Server
+---
+
+# ▶️ Run the Application
+
+```bash
 uvicorn main:app --reload
+```
 
-Server will start at:
+The application will start at:
 
+```
 http://127.0.0.1:8000
-📡 API Endpoints
-🔍 Run Research
-POST /api/research
+```
 
-Request Body:
+---
 
+# 📡 API Endpoints
+
+## 🔍 Run Research
+
+**POST** `/api/research`
+
+### Request
+
+```json
 {
-  "query": "AI in healthcare",
+  "query": "Applications of AI in Healthcare",
   "max_subtopics": 4
 }
-❤️ Health Check
-GET /health
+```
 
-Response:
+---
 
+## ❤️ Health Check
+
+**GET** `/health`
+
+### Response
+
+```json
 {
   "status": "ok",
   "service": "AgentFlow"
 }
+```
 
-🔄 Workflow Overview
+---
+
+# 🔄 Workflow
+
+```text
 User Query
-   ↓
+      │
+      ▼
 Planner
-   ↓
-Researcher
-   ↓
-Analyst
-   ↓
-Writer
-   ↓
-Reviewer
-   ↓
-Final Output
+      │
+      ▼
+Research (Parallel)
+      │
+      ▼
+Analysis
+      │
+      ▼
+Report Generation
+      │
+      ▼
+Review & Refinement
+      │
+      ▼
+Final Research Report
+```
 
-✨ Features
-Multi-agent AI pipeline
-Real-time + LLM fallback search
-Self-review & revision loop
-Async parallel execution
-Clean modular architecture
+---
 
+# 💼 Skills Demonstrated
 
-🧠 Future Improvements
-Streaming responses (SSE)
-UI dashboard
-Multi-model support
-Persistent memory (vector DB)
+- Generative AI
+- AI Agent Development
+- LangGraph
+- LangChain
+- Prompt Engineering
+- FastAPI
+- REST API Development
+- LLM Integration
+- Async Python
+- Workflow Orchestration
+- Modular Software Architecture
+
+---
+
+# 🚀 Future Enhancements
+
+- Streaming Responses (SSE)
+- Multi-LLM Support
+- Vector Database Integration
+- Retrieval-Augmented Generation (RAG)
+- Persistent Memory
+- Authentication & User Management
+- Docker Deployment
+- CI/CD Pipeline
+
+---
+
+# 👨‍💻 Author
+
+## Rushikesh Kapadnis
+
+**AI/ML Engineer | Data Scientist | Generative AI Developer**
+
+**Skills:** Python • SQL • FastAPI • Machine Learning • LangGraph • LangChain • LLMs • AI Agents • Generative AI
