@@ -233,10 +233,3 @@ Final Research Report
 
 ---
 
-# 👨‍💻 Author
-
-## Rushikesh Kapadnis
-
-**AI/ML Engineer | Data Scientist | Generative AI Developer**
-
-**Skills:** Python • SQL • FastAPI • Machine Learning • LangGraph • LangChain • LLMs • AI Agents • Generative AI
