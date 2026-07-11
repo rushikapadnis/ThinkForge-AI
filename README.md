@@ -1,6 +1,6 @@
-# 🚀 AgentFlow – AI Research Automation System
+# 🚀 ThinkForge-AI – AI Research Automation System
 
-**AgentFlow** is an AI-powered multi-agent research automation platform built with **FastAPI**, **LangGraph**, and **LLMs**. It transforms a single user query into a structured research report by coordinating specialized AI agents that plan, research, analyze, write, and review information automatically.
+**ThinkForge-AI** is an AI-powered multi-agent research automation platform built with **FastAPI**, **LangGraph**, and **LLMs**. It transforms a single user query into a structured research report by coordinating specialized AI agents that plan, research, analyze, write, and review information automatically.
 
 > **Tech Focus:** AI Agents • Generative AI • LangGraph • FastAPI • LangChain • LLM Orchestration • Async Python
 

@@ -4,7 +4,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from api.routes import router
 
 app = FastAPI(
-    title="AgentFlow",
+    title="ThinkForge-AI",
     description="Autonomous Research Intelligence System",
     version="1.0.0",
 )
