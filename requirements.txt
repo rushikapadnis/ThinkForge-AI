@@ -51,7 +51,7 @@ python-dotenv==1.0.1
 
 # Pydantic is used for data validation and structured models.
 # Why we need it: Ensures API inputs and outputs are properly formatted and not garbage data.
-pydantic==2.10.3
+pydantic>=2.11.7
 
 
 # ── Streaming Support ──────────────────────────────────────────────
