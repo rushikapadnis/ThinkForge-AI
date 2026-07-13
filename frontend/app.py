@@ -12,21 +12,20 @@ st.set_page_config(
 )
 
 # ---------- CSS ----------
+
 def load_css():
-    app_dir = Path(__file__).parent
-    st.write("App directory:", app_dir)
-    st.write("Files:", [f.name for f in app_dir.iterdir()])
+    css_path = Path(__file__).resolve().parent / "style.css"
 
-    css_path = app_dir / "style.css"
+    st.write(css_path)          # temporary debug
+    st.write(css_path.exists()) # temporary debug
 
-    if not css_path.exists():
-        st.error(f"CSS file not found: {css_path}")
-        st.stop()
-
-    st.markdown(
-        f"<style>{css_path.read_text(encoding='utf-8')}</style>",
-        unsafe_allow_html=True,
-    )
+    if css_path.exists():
+        st.markdown(
+            f"<style>{css_path.read_text(encoding='utf-8')}</style>",
+            unsafe_allow_html=True,
+        )
+    else:
+        st.error(f"CSS not found: {css_path}")
 
 load_css()
 
