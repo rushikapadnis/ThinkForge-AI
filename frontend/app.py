@@ -2,7 +2,7 @@ import requests
 import streamlit as st
 import time
 
-API_URL = "https://thinkforge-ai.onrender.com//api/research"
+API_URL = "https://thinkforge-ai.onrender.com/api/research"
 
 st.set_page_config(
     page_title="ThinkForge AI",
