@@ -1,6 +1,7 @@
 import requests
 import streamlit as st
 import time
+from pathlib import Path
 
 API_URL = "https://thinkforge-ai.onrender.com/api/research"
 
@@ -12,7 +13,8 @@ st.set_page_config(
 
 # ---------- CSS ----------
 def load_css():
-    with open("style.css") as f:
+    css_path = Path(__file__).parent / "style.css"
+    with open(css_path, "r", encoding="utf-8") as f:
         st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
 
 load_css()
