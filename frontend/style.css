@@ -1,0 +1,99 @@
+/* --- Global Variables for Color Palette --- */
+:root {
+  --bg-main: #242426;
+  --bg-sidebar: #1a1a1c;
+  --text-primary: #f8fafc;
+  --text-secondary: #94a3b8;
+  --accent-teal: #0891b2; /* Main button and sidebar outlines */
+  --accent-teal-hover: #06b6d4;
+  --accent-mint: #34d399; /* Status indicator */
+  --input-bg: #3f3f46;
+  --border-radius-sm: 8px;
+  --border-radius-md: 12px;
+}
+
+/* --- Status Indicator ("Backend Online") --- */
+.status-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: transparent;
+  border: 1px solid var(--accent-mint);
+  color: var(--text-primary);
+  padding: 12px 16px;
+  border-radius: var(--border-radius-sm);
+  font-weight: 500;
+  margin-bottom: 2rem;
+}
+
+.status-dot {
+  height: 10px;
+  width: 10px;
+  background-color: var(--accent-mint);
+  border-radius: 50%;
+  box-shadow: 0 0 8px var(--accent-mint);
+}
+
+/* --- Secondary Buttons (Sidebar "Sample Topics") --- */
+.sidebar-btn {
+  background-color: transparent;
+  border: 1px solid var(--accent-teal);
+  color: var(--accent-teal);
+  padding: 10px 16px;
+  border-radius: var(--border-radius-sm);
+  cursor: pointer;
+  width: 100%;
+  text-align: left;
+  margin-bottom: 10px;
+  font-size: 14px;
+  transition: all 0.2s ease-in-out;
+}
+
+.sidebar-btn:hover {
+  background-color: var(--accent-teal);
+  color: #ffffff;
+  box-shadow: 0 4px 12px rgba(8, 145, 178, 0.3);
+}
+
+/* --- Main Input Field ("Research Topic") --- */
+.research-input {
+  width: 100%;
+  background-color: var(--input-bg);
+  border: 1px solid transparent;
+  color: var(--text-primary);
+  padding: 16px;
+  border-radius: var(--border-radius-md);
+  font-size: 16px;
+  min-height: 100px;
+  resize: vertical;
+  margin-bottom: 16px;
+  transition: border 0.2s ease-in-out;
+}
+
+.research-input:focus {
+  outline: none;
+  border: 1px solid var(--accent-teal);
+}
+
+.research-input::placeholder {
+  color: var(--text-secondary);
+}
+
+/* --- Primary Call-to-Action ("Generate Research") --- */
+.generate-btn {
+  background-color: var(--accent-teal);
+  color: #ffffff;
+  border: none;
+  padding: 14px 24px;
+  border-radius: var(--border-radius-md);
+  cursor: pointer;
+  width: 100%;
+  font-size: 16px;
+  font-weight: 600;
+  text-align: center;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.generate-btn:hover {
+  background-color: var(--accent-teal-hover);
+}
